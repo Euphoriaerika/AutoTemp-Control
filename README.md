@@ -22,7 +22,12 @@ This project implements a system for automatic water temperature regulation usin
 - T1: {hot, not very hot, warm, not very cold}
 - T2: {large angle right, small angle right, zero, small angle left, large angle left}
 
+### Graph of fuzzy sets for temperature
+
 ![Graph of fuzzy sets for temperature](./images/screenshots/temp-graph.jpg)
+
+### Graph of fuzzy sets for crane tilt angle
+
 ![Graph of fuzzy sets for crane tilt angle](./images/screenshots/angle-graph.jpg)
 
 ## Mamdani Algorithm
@@ -34,9 +39,8 @@ Aggregating membership functions keeps the truth value at 0.5.
 ## Defuzzification
 
 To determine the angle of rotation of the tap, the center of gravity method is employed, considering the values of the membership function.
-$$
-y = \frac{\int x \mu(x) \,dx}{\int \mu(x) \,dx}
-$$
+
+![Formula](https://chart.googleapis.com/chart?cht=tx&chl=%5Cfrac%7B%5Cint%20x%20%5Cmu(x)%20dx%7D%7B%5Cint%20%5Cmu(x)%20dx%7D)
 
 ## Implementation
 
